@@ -1,0 +1,34 @@
+﻿
+<table>
+    <form method="post">
+        <tr>
+            <td>Username:</td>
+            <td>
+                @if (ViewBag.user != null)
+                { <input type="text" name="username" value="@ViewBag.user.Username"/> }
+                else { <input type="text" name="username" /> }
+            </td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>
+                @if (ViewBag.user != null)
+                { <input type="text" name="email" value="@ViewBag.user.Email"/> }
+                else { <input type="text" name="email" /> }
+            </td>
+        </tr>
+        <tr> 
+            <td>Password:</td>
+            <td><input type="password" name="password" /></td>
+            <td>@ViewBag.message</td>
+        </tr>
+        <tr>
+            <td>Verify password:</td>
+            <td><input type="password" name="verify" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create New User"</td>
+        </tr>
+    </form>
+</table>
